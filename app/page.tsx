@@ -26,7 +26,7 @@ export default function Home() {
 					</p>
 					<div className="d-grid gap-2 d-md-flex justify-content-md-start">
 
-						<a href="" className="btn btn-primary btn-lg px-4 me-md-2">Book Online</a>
+						<a href="https://app.squareup.com/appointments/book/rfrwmdwkv6qhp0/L5JMDAEQSTJ1K/start" className="btn btn-primary btn-lg px-4 me-md-2">Book Online</a>
 
 						<a href="tel:+16084220468" className="btn btn-outline-secondary btn-lg px-4 ">Call (608) 422-0468</a>
 						
