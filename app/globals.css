@@ -1,6 +1,7 @@
 @charset "UTF-8";
 :root,
 [data-bs-theme=light] {
+  color-scheme: light;
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -11912,8 +11913,8 @@ a {
 
 
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
 }
