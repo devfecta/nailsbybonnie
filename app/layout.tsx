@@ -25,7 +25,32 @@ export const metadata: Metadata = {
 		icon: 'images/favicon.png',
 		apple: 'images/favicon.png', 
 	},
+	openGraph: {
+		url: 'https://nailsbybonniemadison.com',
+    	siteName: 'Nails by Bonnie',
+		locale: 'en_US',
+    	type: 'website',
+	},
+	alternates: {
+    canonical: 'https://nailsbybonniemadison.com/',
+  	},
+	robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+		index: true,
+		follow: true,
+		noimageindex: false,
+		'max-video-preview': -1,
+		'max-image-preview': 'large',
+		'max-snippet': -1,
+    },
+	},
 };
+
+
+
 
 export default function RootLayout({
 	children,

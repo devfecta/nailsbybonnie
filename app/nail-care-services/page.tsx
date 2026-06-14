@@ -9,6 +9,28 @@ export const metadata: Metadata = {
 		icon: 'images/favicon.png',
 		apple: 'images/favicon.png', 
 	},
+	openGraph: {
+		url: 'https://nailsbybonniemadison.com',
+    	siteName: 'Nails by Bonnie',
+		locale: 'en_US',
+    	type: 'website',
+	},
+	alternates: {
+    canonical: 'https://nailsbybonniemadison.com/nail-care-services',
+  	},
+	robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+		index: true,
+		follow: true,
+		noimageindex: false,
+		'max-video-preview': -1,
+		'max-image-preview': 'large',
+		'max-snippet': -1,
+    },
+	},
 };
 
 export default function NailServices() {
@@ -28,7 +50,7 @@ export default function NailServices() {
 
             <article className="row flex-lg-row-reverse align-items-center g-5 my-2"> 
                 <div className="col-12 col-sm-8 col-lg-6"> 
-                    <Image src="/images/manicure.jpg" className="d-block mx-auto img-fluid" alt="Nail Services by Bonnie" width="300" height="200" loading="eager" />
+                    <Image src="/images/manicure.jpg" className="d-block mx-auto img-fluid" alt="Manicure Nail Services" width="300" height="200" loading="eager" />
                 </div>
                 <div className="col-12 col-lg-6">
                     <h2>Manicures</h2>
@@ -49,7 +71,7 @@ export default function NailServices() {
 
             <article className="row flex-lg-row align-items-center g-5 my-2"> 
                 <div className="col-12 col-sm-8 col-lg-6"> 
-                    <Image src="/images/pedicure.jpg" className="d-block mx-auto img-fluid" alt="Nail Services by Bonnie" width="300" height="200" loading="eager" />
+                    <Image src="/images/pedicure.jpg" className="d-block mx-auto img-fluid" alt="Pedicure Nail Services" width="300" height="200" loading="eager" />
                 </div>
                 <div className="col-12 col-lg-6">
                     <h2>Pedicures</h2>
@@ -66,7 +88,7 @@ export default function NailServices() {
 
             <article className="row flex-lg-row-reverse align-items-center g-5 my-2"> 
                 <div className="col-12 col-sm-8 col-lg-6"> 
-                    <Image src="/images/artificial-nails.jpg" className="d-block mx-auto img-fluid" alt="Nail Services by Bonnie" width="300" height="200" loading="eager" />
+                    <Image src="/images/artificial-nails.jpg" className="d-block mx-auto img-fluid" alt="Artificial Nail Services" width="300" height="200" loading="eager" />
                 </div>
                 <div className="col-12 col-lg-6">
                     <h2>Artificial Nails</h2>
