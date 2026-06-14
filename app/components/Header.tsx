@@ -8,7 +8,7 @@ export default function Header() {
         <header className="container py-3 mb-4 border-bottom">
             
             
-            <nav className="d-flex flex-wrap justify-content-between navbar navbar-expand-lg" aria-label="Fifth navbar example">
+            <nav className="d-flex flex-wrap navbar navbar-expand-lg" aria-label="Fifth navbar example">
                 
 
                     <Link href={"/"} className="navbar-brand d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
@@ -19,38 +19,34 @@ export default function Header() {
                         <span className="navbar-toggler-icon"></span> 
                     </button>
                     
-                    <div className="collapse navbar-collapse" id="mainMenu">
+                    <div className="collapse navbar-collapse justify-content-end" id="mainMenu">
 
-                        <ul className="nav nav-pills align-items-center">
+                        <ul className="navbar-nav mb-2">
                             <li className="nav-item">
-                                <a href="#" className="nav-link" aria-current="page">
+                                <Link href={"/"} className="nav-link">
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link">
-                                    Nail Care Services
-                                </a>
+                                <Link href={"/nail-care-services"} className="nav-link">Nail Care Services</Link>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link">
+                                <Link href="https://app.squareup.com/appointments/book/rfrwmdwkv6qhp0/L5JMDAEQSTJ1K/start" className="nav-link" target="_blank">
                                     Book Online
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link">
+                                <Link href={"https://app.squareup.com/gift/MLDEBTF506N74/order"} className="nav-link" target="_blank">
                                     Gift Cards
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link">
+                                <Link href={"https://g.page/r/Cd_M8-CU1681EAI/review"} className="nav-link" target="_blank">
                                     Write a Review
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link">
-                                    About Bonnie
-                                </a>
+                                <Link href={"/about"} className="nav-link">About Bonnie</Link>
                             </li>
                         </ul>
 

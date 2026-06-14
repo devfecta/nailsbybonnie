@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const copyright = {
     currentYear : new Intl.DateTimeFormat('en-US', {year: 'numeric'}).format(Date.now())
@@ -9,12 +10,22 @@ const copyright = {
 export default function Footer() {
     return (
 			<footer className="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-				<div className="col-md-4 d-flex align-items-center">
-					<Link href="/" className="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap">
-						<svg className="bi" width="30" height="24" aria-hidden="true">
-							<use xlinkHref="#bootstrap"></use>
-						</svg>
-					</Link>
+				<div className="col-md-8 d-flex flex-wrap align-items-center gap-5">
+					<Image src="/images/Nails-by-Bonnie.png" className="d-block mx-lg-auto img-fluid" alt="Nail Services by Bonnie" width="200" height="150" loading="eager" /><br/>
+					<span className="mb-3 mb-md-0 text-body-secondary">
+						<p className="mb-2">
+							<Link href={""} target="_blank">
+								4222 Milwaukee Street, Suite 25<br/><em className="fs-6">(Located in Efi&apos;s Nails)</em><br/>
+								Madison, WI 53714
+							</Link>
+						</p>
+						<p className="mb-2">
+							Call or Text: <Link href={"tel:+16084220468"}>(608) 422-0468</Link>
+						</p>
+						<p className="mb-2">
+							e-Mail: <Link href={"mailto:nailsbybonniemadison@gmail.com"}>NailsByBonnieMadison@gmail.com</Link>
+						</p>
+					</span>
 					<span className="mb-3 mb-md-0 text-body-secondary">
 						© {copyright.currentYear} Nails by Bonnie
 					</span>
