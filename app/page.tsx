@@ -9,7 +9,7 @@ export default function Home() {
 					<Image src="/images/Nail-Designs.jpg" className="d-block mx-lg-auto img-fluid" alt="Nail Services by Bonnie" width="700" height="500" loading="eager" />
 				</div>
 				<div className="col-lg-6">
-					<h1 className="display-5 fw-bold lh-1 mb-3">
+					<h1 className="lh-1 mb-3">
 						Feel More Radiant and Relaxed
 					</h1>
 					<p className="h3">The Best Nail Care Service in the Madison Area</p>

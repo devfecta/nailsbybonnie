@@ -7,6 +7,7 @@ import Head from "./components/Head";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import BootstrapClient from "./components/BootstrapClient";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 // const geistSans = Geist({
 // 	variable: "--font-geist-sans",
@@ -59,6 +60,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" data-bs-theme="light" style={{ colorScheme: 'light' }}>
+			<GoogleTagManager gtmId="GTM-54JR6X9M" />
 			<Head/>
 			<body>
 				<Header/>

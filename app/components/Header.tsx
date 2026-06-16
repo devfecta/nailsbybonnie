@@ -12,7 +12,7 @@ export default function Header() {
                 
 
                     <Link href={"/"} className="navbar-brand d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-                        <Image src={"/images/Nails-by-Bonnie.png"} alt="Nails by Bonnie" style={{ maxHeight : "60px", width: "auto" }} width={512} height={250} />
+                        <Image src={"/images/Nails-by-Bonnie.png"} alt="Nails by Bonnie Nail Salon" className="img-fluid" style={{ maxHeight: "60px", width: "auto" }} width={200} height={60} />
                     </Link>
                     
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation"> 
