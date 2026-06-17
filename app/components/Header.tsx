@@ -31,12 +31,12 @@ export default function Header() {
                                 <Link href={"/nail-care-services"} className="nav-link">Nail Care Services</Link>
                             </li>
                             <li className="nav-item">
-                                <Link href="https://app.squareup.com/appointments/book/rfrwmdwkv6qhp0/L5JMDAEQSTJ1K/start" className="nav-link" target="_blank">
+                                <Link href="https://app.squareup.com/appointments/book/rfrwmdwkv6qhp0/L5JMDAEQSTJ1K/start" className="nav-link">
                                     Book Online
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link href={"https://app.squareup.com/gift/MLDEBTF506N74/order"} className="nav-link" target="_blank">
+                                <Link href={"https://app.squareup.com/gift/MLDEBTF506N74/order"} className="nav-link">
                                     Gift Cards
                                 </Link>
                             </li>
