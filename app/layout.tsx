@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+//import { Geist, Geist_Mono } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./globals.css";
-import Head from "./components/Head";
+import Script from 'next/script';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import BootstrapClient from "./components/BootstrapClient";
@@ -61,7 +61,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" data-bs-theme="light" style={{ colorScheme: 'light' }}>
 			<GoogleTagManager gtmId="GTM-54JR6X9M" />
-			<Head/>
+			
 			<body>
 				<Header/>
 				<main className="container">
@@ -69,6 +69,8 @@ export default function RootLayout({
 				</main>
 				<Footer/>
 				<BootstrapClient />
+				<Script src="/js/main.js" strategy="afterInteractive" />
+				
 			</body>
 		</html>
 	);

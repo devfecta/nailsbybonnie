@@ -8,7 +8,7 @@ export default function Header() {
         <header className="container py-3 mb-4 border-bottom">
             
             
-            <nav className="d-flex flex-wrap navbar navbar-expand-lg" aria-label="Fifth navbar example">
+            <nav id="headerNav" className="d-flex flex-wrap navbar navbar-expand-lg" aria-label="Main Navigation">
                 
 
                     <Link href={"/"} className="navbar-brand d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
