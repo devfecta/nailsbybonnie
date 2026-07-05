@@ -67,7 +67,7 @@ export default function RootLayout({
 				<main className="container">
 					{children}
 				</main>
-				<Footer/>
+				<Footer />
 				<BootstrapClient />
 				<Script src="/js/main.js" strategy="afterInteractive" />
 				
