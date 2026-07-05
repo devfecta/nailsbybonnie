@@ -47,7 +47,7 @@ export default function Footer() {
 		}
 	);
 	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState(null);
+	const [err, setError] = useState(null);
 
 	
 
@@ -76,10 +76,11 @@ export default function Footer() {
 				// };
 			}
 			catch(error) {;
-				setError(error.message);
+				console.error(error);
+				// setError(error);
 			}
 			finally {
-				setLoading(false);
+				// setLoading(false);
 			}
 		};
 
@@ -123,7 +124,7 @@ export default function Footer() {
 	
 
 	// if (loading) return <div>Loading business data...</div>;
-  	// if (error) return <div>{error}</div>;
+  	//if (err) return <div>{err}</div>;
 
 
     return (
