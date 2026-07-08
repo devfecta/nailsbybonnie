@@ -18,31 +18,37 @@ export default function Footer() {
 	// const [loading, setLoading] = useState(true);
 	// const [error, setError] = useState<string | null>(null);
 
+	const placeId = process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID || '';
+
+
 	const [businessData, setBusiness] = useState(
 		{
 			postalAddress: {
-				"revision": 0,
-				"regionCode": "",
-				"languageCode": "",
-				"postalCode": "",
-				"sortingCode": "",
-				"administrativeArea": "",
-				"locality": "",
-				"sublocality": "",
+				"regionCode": "US",
+				"languageCode": "en-US",
+				"postalCode": "53714",
+				"administrativeArea": "Wisconsin",
+				"locality": "Madison",
 				"addressLines": [
-					""
-				],
-				"recipients": [
-					""
+					"4222 Milwaukee St, Suite 25"
 				],
 				"organization": ""
 			}, 
-			nationalPhoneNumber: '',
-			internationalPhoneNumber: '',
-			googleMapsUri: '', 
+			nationalPhoneNumber: '(608) 422-0468',
+			internationalPhoneNumber: '+1 608-422-0468',
+			googleMapsUri: 'https://maps.google.com/?cid=3868547639363751135&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA', 
 			regularOpeningHours: {
-				weekdayDescriptions: [], 
-				openNow: false
+				"openNow": false,
+				"periods": [],
+				"weekdayDescriptions": [
+					"Monday: 11:00 AM - 6:00 PM",
+					"Tuesday: 11:00 AM - 6:00 PM",
+					"Wednesday: 9:00 AM - 6:00 PM",
+					"Thursday: 9:00 AM - 6:00 PM",
+					"Friday: 9:00 AM - 6:00 PM",
+					"Saturday: 9:00 AM - 5:00 PM",
+					"Sunday: 12:30 - 5:00 PM"
+				],
 			}
 		}
 	);
@@ -53,38 +59,38 @@ export default function Footer() {
 
 	useEffect(() => {
 
-		const GetBusinessData = async () => {
+		// const GetBusinessData = async () => {
 		
-			try {
-				const placeId = "ChIJOdlpM-boQmoR38zz4JTXrzU";
-				const response = await fetch(`/api/business?placeId=${placeId}`);
-				if (!response.ok) {
-					throw new Error('Could not fetch location.');
-				}
-				const data = await response.json();
-				console.log(data);
-				setBusiness(data);
-				//console.log(businessData);
-				// .then((res) => res)
-				// .then((data) => data)
-				// .catch((err) => console.error(err));
+		// 	try {
+				
+		// 		const response = await fetch(`/api/business?placeId=${placeId}`);
+		// 		if (!response.ok) {
+		// 			throw new Error('Could not fetch location.');
+		// 		}
+		// 		const data = await response.json();
+		// 		console.log(data);
+		// 		setBusiness(data);
+		// 		//console.log(businessData);
+		// 		// .then((res) => res)
+		// 		// .then((data) => data)
+		// 		// .catch((err) => console.error(err));
 
-				// const json = await response.json();
-				// console.log(json.result);
-				// return {
-				// props: { data: json.result },
-				// };
-			}
-			catch(error) {;
-				console.error(error);
-				// setError(error);
-			}
-			finally {
-				// setLoading(false);
-			}
-		};
+		// 		// const json = await response.json();
+		// 		// console.log(json.result);
+		// 		// return {
+		// 		// props: { data: json.result },
+		// 		// };
+		// 	}
+		// 	catch(error) {;
+		// 		console.error(error);
+		// 		// setError(error);
+		// 	}
+		// 	finally {
+		// 		// setLoading(false);
+		// 	}
+		// };
 
-		GetBusinessData();
+		// GetBusinessData();
 
 		
 
@@ -97,11 +103,8 @@ export default function Footer() {
 
 		// console.log("businessData", GetBusinessData());
 
-
-		
 		// const fetchBusiness = async () => {
 		// 	try {
-		// 		const placeId = "ChIJOdlpM-boQmoR38zz4JTXrzU";
 		// 		//console.log(placeId);
 		// 		const res = await fetch(`/api/business?placeId=${placeId}`);
 
@@ -121,7 +124,7 @@ export default function Footer() {
 		// 	fetchBusiness();		
 	}, []);
 
-	
+	//console.log(businessData);
 
 	// if (loading) return <div>Loading business data...</div>;
   	//if (err) return <div>{err}</div>;
@@ -135,7 +138,7 @@ export default function Footer() {
 						<Image src="/images/Nails-by-Bonnie.png" className="my-2 mx-md-auto img-fluid" alt="Nail Services by Bonnie" width="200" height="150" loading="eager" /><br/>
 
 					</div>
-					<div className="col-12 col-md-6 col-lg-4 col-xl-3 align-items-center text-body-secondary">
+					<div className="col-12 col-md-6 col-lg-4 align-items-center text-body-secondary">
 						<p className="mb-2">
 							<Link href={businessData.googleMapsUri} target="_blank">
 							{businessData.postalAddress.addressLines[0]}<br/>
@@ -162,7 +165,7 @@ export default function Footer() {
 						</ul>
 					</div>
 
-					<div className="col-12 col-md-6 col-lg-4 col-xl-3">
+					<div className="col-12 col-md-6 col-lg-4 col-xl-2">
 						<a className="fs-1" href="https://www.instagram.com/nailsbybonniemadison" target="_blank" aria-label="Instagram">
 							<i className="fa-brands fa-square-instagram"></i>
 						</a>
