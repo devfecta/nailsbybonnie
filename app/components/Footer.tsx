@@ -59,38 +59,38 @@ export default function Footer() {
 
 	useEffect(() => {
 
-		// const GetBusinessData = async () => {
+		const GetBusinessData = async () => {
 		
-		// 	try {
+			try {
 				
-		// 		const response = await fetch(`/api/business?placeId=${placeId}`);
-		// 		if (!response.ok) {
-		// 			throw new Error('Could not fetch location.');
-		// 		}
-		// 		const data = await response.json();
-		// 		console.log(data);
-		// 		setBusiness(data);
-		// 		//console.log(businessData);
-		// 		// .then((res) => res)
-		// 		// .then((data) => data)
-		// 		// .catch((err) => console.error(err));
+				const response = await fetch(`/api/business?placeId=${placeId}`);
+				if (!response.ok) {
+					throw new Error('Could not fetch location.');
+				}
+				const data = await response.json();
+				console.log(data);
+				setBusiness(data);
+				//console.log(businessData);
+				// .then((res) => res)
+				// .then((data) => data)
+				// .catch((err) => console.error(err));
 
-		// 		// const json = await response.json();
-		// 		// console.log(json.result);
-		// 		// return {
-		// 		// props: { data: json.result },
-		// 		// };
-		// 	}
-		// 	catch(error) {;
-		// 		console.error(error);
-		// 		// setError(error);
-		// 	}
-		// 	finally {
-		// 		// setLoading(false);
-		// 	}
-		// };
+				// const json = await response.json();
+				// console.log(json.result);
+				// return {
+				// props: { data: json.result },
+				// };
+			}
+			catch(error) {;
+				console.error(error);
+				// setError(error);
+			}
+			finally {
+				// setLoading(false);
+			}
+		};
 
-		// GetBusinessData();
+		GetBusinessData();
 
 		
 
@@ -156,13 +156,14 @@ export default function Footer() {
 						</p>
 					</div>
 					<div className="col-12 col-md-6 col-lg-4 col-xl-3 align-items-center">
-						<ul className="list-unstyled text-body-secondary">
+						<ul className="list-unstyled text-body-secondary mb-1">
 							{
 								businessData.regularOpeningHours.weekdayDescriptions.map((date, index, []) => (
 									<li key={index}>{date}</li>
 								))
 							}
 						</ul>
+						<p className='small'>For more up-to-date times <Link href={businessData.googleMapsUri} target="_blank">click here to view Bonnie&apos;s Google Maps Profile</Link>.</p>
 					</div>
 
 					<div className="col-12 col-md-6 col-lg-4 col-xl-2">
