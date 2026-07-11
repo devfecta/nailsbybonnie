@@ -8,8 +8,8 @@ export async function GET(request: Request) {
 	// Get the placeId from the frontend request URL query parameters
 	// const { searchParams } = new URL(request.url);
 	// const placeId = searchParams.get('placeId');
-
-	const placeId = process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID || '';
+  
+  const placeId = process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID || '';
 
 	if (!placeId) {
 		return NextResponse.json({ error: 'Missing placeId parameter' }, { status: 400 });
