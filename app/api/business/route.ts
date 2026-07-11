@@ -8,7 +8,6 @@ export async function GET(request: Request) {
 	// Get the placeId from the frontend request URL query parameters
 	// const { searchParams } = new URL(request.url);
 	// const placeId = searchParams.get('placeId');
-	const placeId = "ChIJOdlpM-boQmoR38zz4JTXrzU";
 
 	if (!placeId) {
 		return NextResponse.json({ error: 'Missing placeId parameter' }, { status: 400 });
@@ -16,7 +15,6 @@ export async function GET(request: Request) {
 
 	// Use your server-side environment variable for safety
 	const apiKey = process.env.NEXT_PUBLIC_GOOGLE_PLACES_API || ''; 
-	//const apiKey = "AIzaSyAWmMN090CN8LbND8uVhF3SefzwB99u-wQ";
 	const googleUrl = `https://places.googleapis.com/v1/places/${placeId}`;
 
 	try {
