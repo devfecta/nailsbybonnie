@@ -21,5 +21,8 @@
   },
   "observability": {
     "enabled": true
+  },
+  "secrets": {
+    "required": ["NEXT_PUBLIC_GOOGLE_PLACES_API", "NEXT_PUBLIC_GOOGLE_PLACE_ID"],
   }
 }
